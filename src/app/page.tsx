@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import styles from './page.module.css';
-import { ReactNode, useState } from 'react';
-import Link from 'next/link';
+import { ReactNode } from 'react';
 
 interface MotionSectionProps {
   children: ReactNode;
@@ -67,7 +66,7 @@ export default function Home() {
         <MotionSection delay={0.2}>
           <h2 className={styles.sectionTitle}>サークル概要</h2>
           <div className={styles.content}>
-            <p>音風はエレクトーンを通して音楽と部員同士の交流を楽しむサークルです。定期的に部内で行なっているコンサートではエレクトーンを何人かで演奏するアンサンブルのグループ、通称"アンサ"を組み、楽しく演奏しています。</p>
+            <p>音風はエレクトーンを通して音楽と部員同士の交流を楽しむサークルです。定期的に部内で行なっているコンサートではエレクトーンを何人かで演奏するアンサンブルのグループ、通称&quot;アンサ&quot;を組み、楽しく演奏しています。</p>
             <p>入部はいつでもだれでも大歓迎です。音楽経験のある人もない人も、私たちと楽しい学生生活を送りませんか？</p>
           </div>
         </MotionSection>

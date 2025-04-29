@@ -1,6 +1,5 @@
 import { Inter } from 'next/font/google'
 import "./styles/globals.css"
-import DotGrid from "@/components/DotGrid"
 import HamburgerMenu from '../components/HamburgerMenu'
 import NoteBackground from '../components/NoteBackground'
 

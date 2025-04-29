@@ -10,27 +10,6 @@ function getRandom(min: number, max: number) {
   return Math.random() * (max - min) + min;
 }
 
-// 下に凸の2次関数分布で左右位置を決める（係数を1.2にして端への偏りをさらに弱める）
-function getParabolaLeft() {
-  const x = Math.random();
-  // 係数1.2で端への偏りをさらに弱める
-  const y = 1.2 * Math.pow(x - 0.5, 2);
-  return x < 0.5 ? (0 + (0.5 - x) * 2 * 20 * y) : (100 - (x - 0.5) * 2 * 20 * y);
-}
-
-function getMixedLeft() {
-  const r = Math.random();
-  if (r < 0.7) {
-    // 70%は一様分布
-    return getRandom(0, 100);
-  } else {
-    // 30%は端寄り分布
-    const x = Math.random();
-    const y = 4 * Math.pow(x - 0.5, 2);
-    return x < 0.5 ? (0 + (0.5 - x) * 2 * 20 * y) : (100 - (x - 0.5) * 2 * 20 * y);
-  }
-}
-
 export default function NoteBackground() {
   const [notes, setNotes] = useState<JSX.Element[]>([]);
 
