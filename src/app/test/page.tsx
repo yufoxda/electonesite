@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import styles from '../page.module.css';
-import { motion } from 'framer-motion';
 
 export default function TestPage() {
   return (
